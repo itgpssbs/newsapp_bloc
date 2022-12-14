@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 // import '../data/model/articleresults.dart';
-import '../provider/newsprovider.dart';
-import '../ui/detail_news.dart';
+import '../../../data/model/article.dart';
+import '../../../provider/newsprovider.dart';
 
-import '../data/model/article.dart';
+import 'detail_news.dart';
 
 class NewsListPage extends StatelessWidget{
   static const routeName='news_list';

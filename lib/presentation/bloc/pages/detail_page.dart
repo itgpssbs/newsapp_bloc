@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../data/model/monsterTruck.dart';
+import '../../../data/model/monsterTruck.dart';
 
 class DetailPage extends StatelessWidget {
   final MonsterTruck monsterTruck;

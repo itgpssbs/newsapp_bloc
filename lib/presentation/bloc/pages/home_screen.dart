@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../data/model/monsterTruck.dart';
+import '../../../data/model/monsterTruck.dart';
 import 'detail_page.dart';
 
 class HomeScreen extends StatelessWidget{

@@ -3,8 +3,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import '../provider/newsprovider.dart';
-import '../data/api/apiservice.dart';
+import '../../../provider/newsprovider.dart';
+import '../../../data/api/apiservice.dart';
 import 'newslistpage.dart';
 
 class NewsScreen extends StatefulWidget {

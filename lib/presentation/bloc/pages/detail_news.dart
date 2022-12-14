@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import '../ui/more_news.dart';
 
-import '../data/model/article.dart';
+import '../../../data/model/article.dart';
+import 'more_news.dart';
 
 class DetailNewsScreen extends StatelessWidget{
   static const routeName = '/articles_detail';

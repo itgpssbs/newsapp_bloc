@@ -1,35 +1,7 @@
-import 'dart:convert';
 
+import 'dart:convert';
+import 'package:equatable/equatable.dart';
 import 'source.dart';
-//
-// class Article{
-//   final String author;
-//   final String title;
-//   final String description;
-//   final String url;
-//   final String urlToImage;
-//   final String publishedAt;
-//   final String content;
-//
-//   Article({
-//     required this.author,
-//     required this.title,
-//     required this.description,
-//     required this.url,
-//     required this.urlToImage,
-//     required this.publishedAt,
-//     required this.content,
-//   });
-//   factory Article.fromJson(Map<String,dynamic> article)=>Article(
-//       author: article['author'],
-//       title: article['title'],
-//       description: article['description'],
-//       url: article['url'],
-//       urlToImage: article['urlToImage'],
-//       publishedAt: article['publishedAt'],
-//       content: article['content']
-//   );
-// }
 
 List<Article> parseArticles(String? json){
   if (json==null){
@@ -39,9 +11,7 @@ List<Article> parseArticles(String? json){
   return parsed.map((json)=>Article.fromJson(json)).toList();
 }
 
-
-
-class Article {
+class Article extends Equatable{
   Article({
     required this.source,
     required this.author,
@@ -83,5 +53,8 @@ class Article {
     "publishedAt": publishedAt.toIso8601String(),
     "content": content,
   };
-}
 
+  @override
+  // TODO: implement props
+  List<Object?> get props => [source, author, title, description, url, urlToImage,publishedAt, content];
+}
