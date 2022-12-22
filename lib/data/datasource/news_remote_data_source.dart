@@ -11,9 +11,10 @@ abstract class NewsRemoteDatasource{
 }
 
 class NewsRemoteDataSourceImpl implements NewsRemoteDatasource{
-  final http.Client client;
+  final http.Client client = http.Client();
 
-  NewsRemoteDataSourceImpl({required this.client});
+  // NewsRemoteDataSourceImpl({required this.client});
+  NewsRemoteDataSourceImpl();
 
   @override
   Future<ArticleResults> searchNews(String date, String query) async{

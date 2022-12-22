@@ -8,8 +8,7 @@ import '../datasource/news_remote_data_source.dart';
 
 // remote datasource
 class NewsRepositoryImpl implements NewsRepository{
-  final NewsRemoteDataSourceImpl remoteDataSource;
-
+  final NewsRemoteDatasource remoteDataSource;
   NewsRepositoryImpl({required this.remoteDataSource});
 
   @override
@@ -17,8 +16,8 @@ class NewsRepositoryImpl implements NewsRepository{
     try{
       final result = await remoteDataSource.searchNews(date, query);
       return Right(result);
-    // }on ServerException{
-    //   return Left(ServerFailure());
+    }on ServerException{
+      return Left(ServerFailure());
     }on SocketException{
       return Left(ConnectionFailure());
     }

@@ -12,5 +12,6 @@ void init(){
   //Lazy = aplikasi sudah jalan
   locator.registerLazySingleton(() => SearchNews(locator()));
   locator.registerLazySingleton<NewsRepository>(() => NewsRepositoryImpl(remoteDataSource:locator()));
-  locator.registerLazySingleton<NewsRemoteDatasource>(() => NewsRemoteDataSourceImpl(client:locator()));
+  // locator.registerLazySingleton<NewsRemoteDatasource>(() => NewsRemoteDataSourceImpl(client:locator()));
+  locator.registerLazySingleton<NewsRemoteDatasource>(() => NewsRemoteDataSourceImpl());
 }

@@ -31,6 +31,14 @@ class ArticleResults extends Equatable {
     )),
   );
 
+  ArticleResults toEntity() {
+    return ArticleResults(
+        status: status,
+        totalResults: totalResults,
+        articles: articles
+    );
+  }
+
   Map<String, dynamic> toJson() => {
     "status": status,
     "totalResults": totalResults,
