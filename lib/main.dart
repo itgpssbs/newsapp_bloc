@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:provider/provider.dart';
 import 'package:thirdproject/presentation/bloc/pages/load_image.dart';
 import 'presentation/bloc/news_search/news_search_bloc.dart';
+import 'presentation/bloc/pages/load_map.dart';
 import 'presentation/bloc/pages/news_screen.dart';
 import 'presentation/bloc/pages/detail_news.dart';
 import '../common/styles.dart';
@@ -61,8 +62,9 @@ class MyApp extends StatelessWidget {
         ),
         // initialRoute: NewsScreen.routeName,
           // initialRoute: NewsScreenSearch.routeName,
-          initialRoute: LoadImageScreen.routeName,
+          initialRoute: LoadMapScreen.routeName,
         routes: {
+          LoadMapScreen.routeName: (context)=>const LoadMapScreen(),
           LoadImageScreen.routeName: (context)=>const LoadImageScreen(),
           NewsScreen.routeName: (context)=>const NewsScreen(),
           NewsScreenSearch.routeName: (context)=>const NewsScreenSearch(),
